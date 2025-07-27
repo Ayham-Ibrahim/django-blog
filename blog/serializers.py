@@ -26,6 +26,9 @@ class CommentSerializer(serializers.ModelSerializer):
       class Meta:
         model = Comment
         fields = ['id', 'text']
+        
+        
+        # new edit by hala 
 
 {
   "title": "عنوان المنشور",
