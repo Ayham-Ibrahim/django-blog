@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category,Post
+from .models import Category,Post,Comment
 
 
 class CategorySerializer(serializers,ModelSerializer):
@@ -22,7 +22,10 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'category']
         
         
-
+class CommentSerializer(serializers.ModelSerializer):
+      class Meta:
+        model = Comment
+        fields = ['id', 'text']
 
 {
   "title": "عنوان المنشور",
